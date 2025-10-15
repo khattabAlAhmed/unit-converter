@@ -1,0 +1,23 @@
+{
+  "HomePage": {
+    "title": "National Leadership",
+    "description": "Welcome to National Leadership website",
+    "welcome": "Welcome",
+    "getStarted": "Get Started"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete"
+  }
+}

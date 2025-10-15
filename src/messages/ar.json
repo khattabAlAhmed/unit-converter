@@ -1,0 +1,23 @@
+{
+  "HomePage": {
+    "title": "الريادة الوطنية",
+    "description": "مرحباً بك في موقع الريادة الوطنية",
+    "welcome": "أهلاً وسهلاً",
+    "getStarted": "ابدأ الآن"
+  },
+  "Navigation": {
+    "home": "الرئيسية",
+    "about": "حولنا",
+    "services": "الخدمات",
+    "contact": "اتصل بنا"
+  },
+  "Common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "success": "تم بنجاح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف"
+  }
+}
