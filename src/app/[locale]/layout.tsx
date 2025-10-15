@@ -3,7 +3,8 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
 import LanguageProvider from '@/components/LanguageProvider';
-import Header from '@/components/Header';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
 
 type Props = {
   children: React.ReactNode;
@@ -35,6 +36,7 @@ export default async function LocaleLayout({children, params}: Props) {
         <LanguageProvider messages={messages} locale={locale}>
           <Header />
           {children}
+          <Footer />
         </LanguageProvider>
       </body>
     </html>

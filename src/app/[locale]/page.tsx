@@ -1,15 +1,18 @@
 import {useTranslations} from 'next-intl';
+import HomeHeroSection from '@/components/home-sections/HomeHeroSection';
+import HomeAboutSection from '@/components/home-sections/HomeAboutSection';
+import HomeServicesSection from '@/components/home-sections/HomeServicesSection';
+import ContactSection from '@/components/shared-sections/ContactSection';
 
 export default function Home() {
   const t = useTranslations('HomePage');
 
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <section className="flex flex-col items-center justify-center">
-      <h1 className="text-6xl font-bold text-center text-blue-600">
-        {t('title')}
-      </h1>
-      </section>
+    <main className="min-h-screen flex flex-col items-center justify-center">
+      <HomeHeroSection />
+      <HomeAboutSection />
+      <HomeServicesSection />
+      <ContactSection />
     </main>
   );
 }

@@ -1,4 +1,4 @@
-import LanguageSwitcher from "./LanguageSwitcher"
+import LanguageSwitcher from "../LanguageSwitcher"
 
 const Header = () => {
   return (
