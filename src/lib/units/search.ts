@@ -1,5 +1,5 @@
 import { getAllUnits, getUnitsByCategory } from './converters';
-import type { Unit } from './types';
+import type { Unit, UnitCategory } from './types';
 
 export interface SearchResult {
   unit: Unit;
@@ -88,7 +88,7 @@ export function searchUnitsByCategory(
   query: string = '',
   locale: 'ar' | 'en' = 'en'
 ): Unit[] {
-  let units = category ? getUnitsByCategory(category as any) : getAllUnits();
+  const units = category ? getUnitsByCategory(category as UnitCategory) : getAllUnits();
 
   if (!query.trim()) {
     return units;

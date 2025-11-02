@@ -5,7 +5,7 @@ import DocumentAttributesHandler from './DocumentAttributesHandler';
 
 type Props = {
   children: React.ReactNode;
-  messages: any;
+  messages: Record<string, unknown>;
   locale: string;
 };
 

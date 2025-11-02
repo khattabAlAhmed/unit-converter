@@ -5,8 +5,6 @@ export function generateStructuredData(
   locale: string,
   url: string
 ): object {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://example.com';
-  
   const categoryNames: Record<UnitCategory, { ar: string; en: string }> = {
     length: { ar: 'محول الطول', en: 'Length Converter' },
     mass: { ar: 'محول الكتلة', en: 'Mass Converter' },

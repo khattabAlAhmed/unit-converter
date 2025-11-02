@@ -58,7 +58,6 @@ export default async function CategoryPage({ params }: PageProps) {
   }
 
   const unitCategory = category as UnitCategory;
-  const converter = getConverter(unitCategory);
   const t = await getTranslations('Categories');
   const tSEO = await getTranslations('SEO.description');
 

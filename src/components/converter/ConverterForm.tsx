@@ -25,7 +25,7 @@ export default function ConverterForm({ category }: ConverterFormProps) {
       setFromUnit(units[0].id);
       setToUnit(units.length > 1 ? units[1].id : units[0].id);
     }
-  }, [category]);
+  }, [category, units]);
 
   // Perform conversion when inputs change
   useEffect(() => {

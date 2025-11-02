@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, useCallback, ReactNode } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -26,7 +26,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   };
 
   // Apply theme to document
-  const applyTheme = (themeToApply: Theme) => {
+  const applyTheme = useCallback((themeToApply: Theme) => {
     const root = document.documentElement;
     const resolved = themeToApply === 'system' ? getSystemTheme() : themeToApply;
     
@@ -35,7 +35,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     root.setAttribute('data-theme', resolved);
     
     setResolvedTheme(resolved);
-  };
+  }, []);
 
   // Load theme from localStorage on mount
   useEffect(() => {
@@ -44,14 +44,21 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme(initialTheme);
     applyTheme(initialTheme);
     setMounted(true);
-  }, []);
+  }, [applyTheme]);
 
   // Save theme to localStorage when it changes
-  const handleSetTheme = (newTheme: Theme) => {
+  const handleSetTheme = useCallback((newTheme: Theme) => {
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-    applyTheme(newTheme);
-  };
+    const root = document.documentElement;
+    const resolved = newTheme === 'system' ? getSystemTheme() : newTheme;
+    
+    root.classList.remove('light', 'dark');
+    root.classList.add(resolved);
+    root.setAttribute('data-theme', resolved);
+    
+    setResolvedTheme(resolved);
+  }, []);
 
   // Listen for system theme changes
   useEffect(() => {
@@ -64,7 +71,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
-  }, [theme]);
+  }, [theme, applyTheme]);
 
   // Always provide context, but hide content until mounted to prevent flash
   return (

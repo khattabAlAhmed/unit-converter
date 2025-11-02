@@ -10,6 +10,12 @@ interface AdSenseProps {
   className?: string;
 }
 
+declare global {
+  interface Window {
+    adsbygoogle?: unknown[];
+  }
+}
+
 export default function AdSense({
   adSlot,
   adFormat = 'auto',
@@ -20,7 +26,7 @@ export default function AdSense({
   useEffect(() => {
     try {
       // Load AdSense script if not already loaded
-      if (typeof window !== 'undefined' && !(window as any).adsbygoogle) {
+      if (typeof window !== 'undefined' && !window.adsbygoogle) {
         const script = document.createElement('script');
         script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX';
         script.async = true;
@@ -29,9 +35,9 @@ export default function AdSense({
       }
 
       // Initialize ad
-      if ((window as any).adsbygoogle && !(window as any).adsbygoogle.loaded) {
+      if (window.adsbygoogle) {
         try {
-          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+          window.adsbygoogle.push({});
         } catch (err) {
           console.error('AdSense error:', err);
         }
