@@ -60,7 +60,7 @@ export default function AdSense({
           width: '100%',
           ...style,
         }}
-        data-ad-client="ca-pub-XXXXXXXXXX"
+        data-ad-client="ca-pub-2044363478388359"
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive={fullWidthResponsive ? 'true' : 'false'}

@@ -1,6 +1,7 @@
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
+import type { Metadata } from 'next';
 
 import LanguageProvider from '@/components/LanguageProvider';
 import {ThemeProvider} from '@/components/theme/ThemeProvider';
@@ -14,6 +15,14 @@ type Props = {
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    other: {
+      'google-adsense-account': 'ca-pub-2044363478388359',
+    },
+  };
 }
 
 export default async function LocaleLayout({children, params}: Props) {
