@@ -3,6 +3,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
 import LanguageProvider from '@/components/LanguageProvider';
+import {ThemeProvider} from '@/components/theme/ThemeProvider';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 
@@ -33,11 +34,15 @@ export default async function LocaleLayout({children, params}: Props) {
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={fontClass}>
       <body className="antialiased">
-        <LanguageProvider messages={messages} locale={locale}>
-          <Header />
-          {children}
-          <Footer />
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider messages={messages} locale={locale}>
+            <Header />
+            <main className="min-h-screen">
+              {children}
+            </main>
+            <Footer />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

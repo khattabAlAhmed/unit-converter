@@ -1,0 +1,6 @@
+You have access to these MCPs:
+- Context7 Mcp: to check latest before installition or codebase changes on versions.
+- Shadcn Mcp: to get shadcn components and registeries components.
+---
+alwaysApply: true
+---

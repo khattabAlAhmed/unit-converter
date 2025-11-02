@@ -1,15 +1,38 @@
 {
   "HomePage": {
-    "title": "National Leadership",
-    "description": "Welcome to National Leadership website",
+    "title": "Universal Unit Converter",
+    "description": "Professional unit converter for converting all types of units: length, mass, time, temperature, speed, energy, pressure, volume, area, and digital data",
     "welcome": "Welcome",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "heroTitle": "Universal Unit Converter",
+    "heroSubtitle": "Convert any unit quickly and accurately with a simple and easy-to-use interface",
+    "searchPlaceholder": "Search for a unit...",
+    "popularCategories": "Popular Categories"
   },
   "Navigation": {
     "home": "Home",
-    "about": "About",
-    "services": "Services",
-    "contact": "Contact"
+    "converters": "Converters",
+    "about": "About"
+  },
+  "Categories": {
+    "length": "Length",
+    "mass": "Mass",
+    "time": "Time",
+    "temperature": "Temperature",
+    "speed": "Speed",
+    "energy": "Energy",
+    "pressure": "Pressure",
+    "volume": "Volume",
+    "area": "Area",
+    "digitalData": "Digital Data"
+  },
+  "Converter": {
+    "value": "Value",
+    "from": "From",
+    "to": "To",
+    "enterValue": "Enter value",
+    "swapUnits": "Swap Units",
+    "result": "Result"
   },
   "Common": {
     "loading": "Loading...",
@@ -18,6 +41,34 @@
     "cancel": "Cancel",
     "save": "Save",
     "edit": "Edit",
-    "delete": "Delete"
+    "delete": "Delete",
+    "search": "Search",
+    "noResults": "No results found"
+  },
+  "SEO": {
+    "title": {
+      "length": "Length Converter - Convert Meter, Foot, Mile, Centimeter, Inch",
+      "mass": "Mass Converter - Convert Kilogram, Pound, Gram, Ounce",
+      "time": "Time Converter - Convert Hour, Minute, Second, Day, Week",
+      "temperature": "Temperature Converter - Convert Celsius, Fahrenheit, Kelvin",
+      "speed": "Speed Converter - Convert km/h, mph, knot",
+      "energy": "Energy Converter - Convert Joule, kWh, Calorie",
+      "pressure": "Pressure Converter - Convert Pascal, Bar, PSI",
+      "volume": "Volume Converter - Convert Liter, Gallon, Cubic Meter",
+      "area": "Area Converter - Convert m², ft², Acre, Hectare",
+      "digitalData": "Digital Data Converter - Convert Byte, KB, MB, GB, TB"
+    },
+    "description": {
+      "length": "Comprehensive length converter to convert between meter, foot, mile, centimeter, inch, yard, kilometer, and nautical mile. Instant and accurate conversion.",
+      "mass": "Mass converter to convert between kilogram, pound, gram, ounce, ton, and stone. Easy and free conversion tool.",
+      "time": "Time converter to convert between second, minute, hour, day, week, month, and year. Fast and accurate time unit conversion.",
+      "temperature": "Temperature converter to convert between Celsius, Fahrenheit, and Kelvin. Easy temperature conversion tool.",
+      "speed": "Speed converter to convert between m/s, km/h, mph, and knot. Instant conversion for all speed units.",
+      "energy": "Energy converter to convert between Joule, Kilojoule, Calorie, Kilowatt Hour, and British Thermal Unit.",
+      "pressure": "Pressure converter to convert between Pascal, Kilopascal, Bar, PSI, Atmosphere, and Torr.",
+      "volume": "Volume converter to convert between Liter, Milliliter, Cubic Meter, Gallon, Cup, Pint, and Quart.",
+      "area": "Area converter to convert between m², ft², mi², Acre, Hectare, and cm².",
+      "digitalData": "Digital data converter to convert between Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, and Bit."
+    }
   }
 }

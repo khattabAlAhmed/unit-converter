@@ -1,0 +1,11 @@
+Use Shadcn components
+Only use colors from globals.css file
+Use start instead of left in tailwind classes e.g. pl > ps
+Responsive Layout
+Content be Arabic and English
+SEO frindly and Meta tags and Sitemap file
+Each component file shouldn't be over 500 lines
+
+---
+alwaysApply: true
+---
