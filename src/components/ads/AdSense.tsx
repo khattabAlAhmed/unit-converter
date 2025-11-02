@@ -28,7 +28,7 @@ export default function AdSense({
       // Load AdSense script if not already loaded
       if (typeof window !== 'undefined' && !window.adsbygoogle) {
         const script = document.createElement('script');
-        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX';
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2044363478388359';
         script.async = true;
         script.crossOrigin = 'anonymous';
         document.head.appendChild(script);
