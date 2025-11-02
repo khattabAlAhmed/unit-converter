@@ -7,6 +7,7 @@ import LanguageProvider from '@/components/LanguageProvider';
 import {ThemeProvider} from '@/components/theme/ThemeProvider';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
+import AdSenseScript from '@/components/ads/AdSenseScript';
 
 type Props = {
   children: React.ReactNode;
@@ -42,6 +43,9 @@ export default async function LocaleLayout({children, params}: Props) {
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={fontClass}>
+      <head>
+        <AdSenseScript />
+      </head>
       <body className="antialiased">
         <ThemeProvider>
           <LanguageProvider messages={messages} locale={locale}>
